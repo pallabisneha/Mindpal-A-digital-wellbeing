@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improving Concentration for Students</title>
+    <link rel="stylesheet" href="Motivation styles.css">
+</head>
+<body>
+    <header>
+        <h1>Improving Concentration</h1>
+        <p>Find tips, strategies, and videos to help improve your focus and concentration.</p>
+    </header>
+
+    <main>
+        <section id="setup-tips">
+            <h2>Setup Tips</h2>
+            <p>Discover ways to create a distraction-free environment and develop habits that support concentration.</p>
+            <button onclick="toggleContent('tips-content')">View Tips</button>
+            <div id="tips-content" style="display: none;">
+                <ul>
+                    <li>Set up a dedicated, clutter-free study space.</li>
+                    <li>Keep your phone and other distractions out of reach.</li>
+                    <li>Use noise-canceling headphones or play focus-enhancing music.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="solutions">
+            <h2>Focus Strategies</h2>
+            <p>Explore strategies specifically aimed at improving concentration and reducing distractions.</p>
+            <div id="solution-list">
+                <!-- Dynamically added solutions will appear here -->
+            </div>
+        </section>
+
+        <section id="videos">
+            <h2>Helpful Videos</h2>
+            <p>Watch videos that offer insights and techniques to improve concentration.</p>
+            <button onclick="toggleVideos()">Show Videos</button>
+            <div id="video-list" style="display: none;">
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=example1" target="_blank">Video 1: Techniques for Better Focus</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=example2" target="_blank">Video 2: Avoiding Distractions</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=example3" target="_blank">Video 3: Concentration Exercises</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="Motivation script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing Time Management Stress</title>
+    <link rel="stylesheet" href="timestyles.css">
+</head>
+<body>
+    <header>
+        <h1>Managing Time Management Stress</h1>
+        <p>Discover effective tips, strategies, and videos to manage your time better and reduce stress.</p>
+    </header>
+
+    <main>
+        <section id="setup-tips">
+            <h2>Setup Tips</h2>
+            <p>Learn how to organize your environment and build habits that support effective time management.</p>
+            <button onclick="toggleContent('tips-content')">View Tips</button>
+            <div id="tips-content" style="display: none;">
+                <ul>
+                    <li>Use a planner or digital calendar to keep track of tasks and deadlines.</li>
+                    <li>Prioritize your tasks at the beginning of each day.</li>
+                    <li>Set time limits for tasks to avoid spending too much time on any one thing.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="solutions">
+            <h2>Time Management Strategies</h2>
+            <p>Explore strategies to reduce stress by improving your time management skills.</p>
+            <div id="solution-list">
+                <!-- Dynamically added solutions will appear here -->
+            </div>
+        </section>
+
+        <section id="videos">
+            <h2>Helpful Videos</h2>
+            <p>Watch videos that provide insights into effective time management and reducing related stress.</p>
+            <button onclick="toggleVideos()">Show Videos</button>
+            <div id="video-list" style="display: none;">
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=example1" target="_blank">Video 1: Time Management Techniques</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=example2" target="_blank">Video 2: Avoiding Procrastination</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=example3" target="_blank">Video 3: Balancing Study and Leisure</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="timescript.js"></script>
+</body>
+</html>

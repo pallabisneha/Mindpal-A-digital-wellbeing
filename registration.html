@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration & Login</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-box register-box show">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <div class="input-group">
+                        <input type="text" id="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="institute" required>
+                        <label>Institute Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                </form>
+                <p class="toggle-text">Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </div>
+
+            <div class="form-box login-box">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="email" id="loginEmail" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <p class="toggle-text">Don't have an account? <a href="#" id="showRegister">Register</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="registration.js"></script>
+</body>
+</html>

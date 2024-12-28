@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(220, 53, 69, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes ripple {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(4); opacity: 0; }
+}
+
+@keyframes popupShow {
+    0% { transform: translate(-50%, -60%); opacity: 0; }
+    100% { transform: translate(-50%, -50%); opacity: 1; }
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #1a1a2e, #16213e, #1f3460, #24243e);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    animation: slideIn 0.5s ease-out;
+}
+
+.content-wrapper {
+    opacity: 0;
+    animation: slideIn 0.5s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.title {
+    text-align: center;
+    color: #1a1a2e;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    color: #16213e;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.emergency-contacts {
+    margin-bottom: 2.5rem;
+}
+
+.contact-input {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+input[type="tel"] {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input[type="tel"]:focus {
+    border-color: #1f3460;
+    box-shadow: 0 0 0 3px rgba(31, 52, 96, 0.1);
+    outline: none;
+}
+
+.add-btn {
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #1f3460, #16213e);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(22, 33, 62, 0.2);
+}
+
+.add-btn:active {
+    transform: translateY(0);
+}
+
+.contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease-out;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.sos-section {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.sos-button {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #dc3545, #c82333);
+    color: white;
+    border: none;
+    font-size: 2.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.sos-text {
+    position: relative;
+    z-index: 2;
+}
+
+.ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.sos-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(220, 53, 69, 0.4);
+}
+
+.sos-button:active {
+    transform: scale(0.95);
+}
+
+.status {
+    margin-top: 1.5rem;
+    color: #16213e;
+    font-weight: 500;
+    min-height: 24px;
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.popup.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: popupShow 0.3s ease-out forwards;
+}
+
+.popup-content h2 {
+    color: #1a1a2e;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.coordinates {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.coordinates p {
+    margin: 0.5rem 0;
+    color: #16213e;
+}
+
+.popup-status {
+    margin: 1rem 0;
+    color: #28a745;
+    font-weight: 500;
+}
+
+.close-btn {
+    background: #1f3460;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.close-btn:hover {
+    background: #16213e;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .contact-input {
+        flex-direction: column;
+    }
+
+    .sos-button {
+        width: 150px;
+        height: 150px;
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .popup-content {
+        padding: 1.5rem;
+    }
+
+    .coordinates {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}

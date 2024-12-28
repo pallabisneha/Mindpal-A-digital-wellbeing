@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Relaxation Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="music-player">
+        <h1>Mind Relaxation</h1>
+        <div class="music-info">
+            <div class="cover-art">
+                <img src="gc308d801ffb4b08e939_1712857798644_1712857798930.webp" alt="Music Cover" id="cover">
+            </div>
+            <div class="track-info">
+                <h2 id="title">Select a Track</h2>
+                <p id="duration">00:00</p>
+            </div>
+        </div>
+        
+        <div class="progress-area">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="timer">
+                <span id="current">00:00</span>
+                <span id="total">00:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prev" class="control-btn">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button id="play-pause" class="control-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="control-btn">
+                <i class="fas fa-forward"></i>
+            </button>
+        </div>
+
+        <div class="playlist">
+            <h3>Playlist</h3>
+            <ul id="playlist-items">
+                <li class="playlist-item" data-src="soul-for-stress-relief-8956.mp3">
+                    <img src="gc308d801ffb4b08e939_1712857798644_1712857798930.webp" alt="Peaceful Meditation" class="playlist-img">
+                    Peaceful Meditation
+                    <span class="duration">3:45</span>
+                </li>
+                <li class="playlist-item" data-src="ocean-190100.mp3">
+                    <img src="istockphoto-1366027192-612x612.jpg" alt="Peaceful Meditation" class="playlist-img">
+                    Ocean Waves
+                    <span class="duration">4:20</span>
+                </li>
+                <li class="playlist-item" data-src="birds39-forest-20772.mp3">
+                    <img src="images.jpeg" alt="Peaceful Meditation" class="playlist-img">
+                    Forest Ambience
+                    <span class="duration">5:15</span>
+                </li>
+                <li class="playlist-item" data-src="rain-and-you-251268.mp3">
+                    <img src="1719291887-0685.avif" alt="Peaceful Meditation" class="playlist-img">
+                    Rain Sounds
+                    <span class="duration">4:50</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

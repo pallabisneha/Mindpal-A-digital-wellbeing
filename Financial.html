@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Academic Problem Solutions</title>
+    <link rel="stylesheet" href="financialstyles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Financial Problem Solutions</h1>
+        <p>Your go-to resource for tips, solutions, and helpful videos to improve academic success.</p>
+    </header>
+
+    <main>
+        <section id="setup-tips">
+            <h2>Setup Tips</h2>
+            <p>Explore tips for setting up a productive study environment and organizing your materials.</p>
+            <button onclick="toggleContent('tips-content')">View Tips</button>
+            <div id="tips-content" style="display: none;">
+                <ul>
+                    <li>Organize your study space for minimal distractions.</li>
+                    <li>Have all necessary materials on hand (notebooks, pens, calculators, etc.).</li>
+                    <li>Consider using a planner or digital tool to track tasks.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="solutions">
+            <h2>Solutions</h2>
+            <p>Find solutions for common academic challenges and questions.</p>
+            <div id="solution-list">
+                <!-- Dynamically added solutions will appear here -->
+            </div>
+        </section>
+
+        <section id="videos">
+            <h2>Helpful Videos</h2>
+            <p>Watch educational videos to reinforce learning and practice techniques.</p>
+            <button onclick="toggleVideos()">Show Videos</button>
+            <div id="video-list" style="display: none;">
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=example1" target="_blank">Video 1: Effective Study Techniques</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=example2" target="_blank">Video 2: Time Management for Students</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=example3" target="_blank">Video 3: Problem-Solving Strategies</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="financialscript.js"></script>
+</body>
+</html>

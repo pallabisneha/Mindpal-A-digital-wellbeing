@@ -1,0 +1,106 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F6FCDF;
+    color: #333;
+    padding: 0 10px;
+}
+
+header {
+    text-align: center;
+    background-color: #31511E;
+    color: white;
+    padding: 40px 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Main Section */
+main {
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Setup Tips and Study Strategies */
+#setup-tips h2, #study-strategies h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #1A1A19;
+    margin-bottom: 20px;
+}
+
+/* Tip Cards */
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+.tip-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+}
+
+.tip-card h3 {
+    font-size: 22px;
+    color: #859F3D;
+}
+
+.tip-card p {
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #F6FCDF;
+    background-color: #31511E;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}

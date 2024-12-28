@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing Career Stress</title>
+    <link rel="stylesheet" href="careerstyles.css">
+</head>
+<body>
+    <header>
+        <h1>Managing Career Stress</h1>
+        <p>Find helpful tips, strategies, and videos to cope with career-related stress and make informed decisions.</p>
+    </header>
+
+    <main>
+        <section id="setup-tips">
+            <h2>Setup Tips</h2>
+            <p>Learn how to organize your environment and develop habits that reduce stress.</p>
+            <button onclick="toggleContent('tips-content')">View Tips</button>
+            <div id="tips-content" style="display: none;">
+                <ul>
+                    <li>Set aside a specific time each day to focus on career planning without distractions.</li>
+                    <li>Keep a journal to organize your thoughts and goals.</li>
+                    <li>Make sure to balance study, career planning, and relaxation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="solutions">
+            <h2>Stress Management Strategies</h2>
+            <p>Explore techniques to reduce stress and anxiety related to career planning.</p>
+            <div id="solution-list">
+                <!-- Dynamically added solutions will appear here -->
+            </div>
+        </section>
+
+        <section id="videos">
+            <h2>Helpful Videos</h2>
+            <p>Watch videos that provide guidance on managing career stress and making career decisions.</p>
+            <button onclick="toggleVideos()">Show Videos</button>
+            <div id="video-list" style="display: none;">
+                <ul>
+                    <li><iframe width="560" height="315" src="https://www.youtube.com/embed/NAlHMtBGu8E?si=lC6YSBBGhvvOhb2K"></iframe></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="careerscript.js"></script>
+</body>
+</html>

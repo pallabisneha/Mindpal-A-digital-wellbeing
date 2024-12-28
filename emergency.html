@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency SOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content-wrapper">
+            <h1 class="title">Emergency SOS</h1>
+            
+            <div class="emergency-contacts">
+                <h2 class="subtitle">Emergency Contacts</h2>
+                <div class="contact-form">
+                    <div class="contact-input">
+                        <input type="tel" id="contact" placeholder="Enter emergency contact number">
+                        <button onclick="addContact()" class="add-btn">Add Contact</button>
+                    </div>
+                    <div id="contacts-list" class="contacts-list">
+                        <!-- Emergency contacts will be listed here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="sos-section">
+                <button id="sos-btn" class="sos-button">
+                    <span class="sos-text">SOS</span>
+                    <div class="ripple"></div>
+                </button>
+                <p id="status" class="status"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Location Popup -->
+    <div id="location-popup" class="popup">
+        <div class="popup-content">
+            <h2>Emergency Alert Sent!</h2>
+            <p>Your location has been sent to emergency contacts:</p>
+            <div class="coordinates">
+                <p>Latitude: <span id="latitude">...</span></p>
+                <p>Longitude: <span id="longitude">...</span></p>
+            </div>
+            <div class="popup-status" id="popup-status"></div>
+            <button onclick="closePopup()" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>

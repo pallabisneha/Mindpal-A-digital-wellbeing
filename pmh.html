@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing Physical and Mental Health Stress</title>
+    <link rel="stylesheet" href="pmhstyles.css">
+</head>
+<body>
+    <header>
+        <h1>Managing Physical and Mental Health Stress</h1>
+        <p>Find helpful tips, strategies, and videos to manage stress for a healthier body and mind.</p>
+    </header>
+
+    <main>
+        <section id="setup-tips">
+            <h2>Setup Tips</h2>
+            <p>Learn how to set up your environment and routines to support your physical and mental well-being.</p>
+            <button onclick="toggleContent('tips-content')">View Tips</button>
+            <div id="tips-content" style="display: none;">
+                <ul>
+                    <li>Maintain a regular sleep schedule to support mental clarity and reduce fatigue.</li>
+                    <li>Set aside time each day for physical exercise, even if it's just a short walk.</li>
+                    <li>Create a relaxation corner with items that help you unwind, like a book or calming music.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="solutions">
+            <h2>Health and Stress Management Strategies</h2>
+            <p>Explore strategies to reduce physical and mental health stress and promote overall well-being.</p>
+            <div id="solution-list">
+                <!-- Dynamically added solutions will appear here -->
+            </div>
+        </section>
+
+        <section id="videos">
+            <h2>Helpful Videos</h2>
+            <p>Watch videos that offer techniques and insights into managing physical and mental health stress.</p>
+            <button onclick="toggleVideos()">Show Videos</button>
+            <div id="video-list" style="display: none;">
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=example1" target="_blank">Video 1: Tips for Reducing Anxiety and Stress</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=example2" target="_blank">Video 2: Physical Exercises for Stress Relief</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=example3" target="_blank">Video 3: Techniques for Mental Wellness</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="pmhscript.js"></script>
+</body>
+</html>
